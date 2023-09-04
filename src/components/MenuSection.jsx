@@ -1,24 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import MainPhoto from './MainPhoto';
+import Category from './Category';
 import styled from 'styled-components';
 
-const MainPhoto = styled.div`
-    background-image: url('https://www.readcereal.com/wp-content/uploads/2020/12/Patagonia12-1250x833.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 600px;
-`
 
-const Category = styled.div`
-    
+const SectionWrapper = styled.div`
+  margin-left : 38px;
+  margin-right : 53px;
+  display : flex;
+  justify-content : space-between;
 `
 
 export default function MenuSection() {
+  const [mainPhotoBg, setMainPhotoBg] = useState('');
   
   return (
     <>
-        <MainPhoto/>
-        <Category/>
+      <SectionWrapper>
+        <MainPhoto background={mainPhotoBg}/>
+        <Category onCategoryHover={setMainPhotoBg}/>
+      </SectionWrapper>
     </>
   );
 }

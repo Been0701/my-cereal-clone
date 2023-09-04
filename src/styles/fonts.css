@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Chronicle'; /* 폰트 이름 */
-    src: url('../styles/font_ver1/Chronicle_ver1.otf') format('opentype'); /* 폰트 파일 경로 */
+    src: url('../styles/font/ChronicleG1.otf') format('opentype'); /* 폰트 파일 경로 */
   }
   
   body {
