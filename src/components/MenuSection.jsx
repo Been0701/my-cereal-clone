@@ -13,12 +13,14 @@ const SectionWrapper = styled.div`
 
 export default function MenuSection() {
   const [mainPhotoBg, setMainPhotoBg] = useState('');
+  const [caption, setCaption] = useState('');
+  const [url, setUrl] = useState('');
   
   return (
     <>
       <SectionWrapper>
-        <MainPhoto background={mainPhotoBg}/>
-        <Category onCategoryHover={setMainPhotoBg}/>
+        <MainPhoto background={mainPhotoBg} caption={caption} url={url}/>
+        <Category onCategoryHover={setMainPhotoBg} onCategoryHoverTxt={setCaption} deliverCategory={setUrl}/>
       </SectionWrapper>
     </>
   );

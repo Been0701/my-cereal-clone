@@ -6,6 +6,10 @@ const SectionWrapper = styled.div`
 const Section = styled.ul`
 list-style : none;
 margin-bottom : 40px;
+a {
+    color : #551A8B;
+    text-decoration : none;
+}
 `;
 
 const ListItem = styled.li`
@@ -21,7 +25,7 @@ h6 {
 }
 `;
 
-export default function Category({onCategoryHover}) {
+export default function Category({onCategoryHover,onCategoryHoverTxt,deliverCategory}) {
 
     const categoryImages = {
         TRAVEL: 'url(https://www.readcereal.com/wp-content/uploads/2020/12/Patagonia12-1250x833.jpg)',
@@ -33,29 +37,41 @@ export default function Category({onCategoryHover}) {
         PLAYLIST: 'url(https://www.readcereal.com/wp-content/uploads/2021/09/Summer-playlist-grid-1250x833.jpg)',
         SHOP: 'url(https://www.readcereal.com/wp-content/uploads/2022/05/Home-1250x833.jpg)'
       };
+    const captionText = {
+        TRAVEL: 'PATAGONIA, CHILE',
+        ART: 'LES PALMIERS, JEAN DUNAND',
+        DESIGN: 'KOREA FURNITURE MUSEUM, SEOUL',
+        STYLE: 'ICONIC FORMS - CARTIER',
+        CITY_GUIDES: 'LOS ANGELES',
+        FILMS: 'DAN PEARSON, HILLSIDE',
+        PLAYLIST: 'SUMMER PLAYLIST 2021',
+        SHOP: 'LOS ANGELES'
+    };
 
     const handleCategoryHover = (category) => {
         onCategoryHover(categoryImages[category]);
+        onCategoryHoverTxt(captionText[category]);
+        deliverCategory(category);
     };
-    
+
     return (
       <>
         <SectionWrapper>
             <Section>
                 <ListItem><h6>SUBJECT</h6></ListItem>
-                <ListItem><h2 onMouseEnter={() => handleCategoryHover('TRAVEL')}>TRAVEL</h2></ListItem>
-                <ListItem><h2 onMouseEnter={() => handleCategoryHover('ART')}>ART</h2></ListItem>
-                <ListItem><h2 onMouseEnter={() => handleCategoryHover('DESIGN')}>DESIGN</h2></ListItem>
-                <ListItem><h2 onMouseEnter={() => handleCategoryHover('STYLE')}>STYLE</h2></ListItem>
-                <ListItem><h2 onMouseEnter={() => handleCategoryHover('CITY_GUIDES')}>CITY GUIDES</h2></ListItem>
+                <a href='/travel'><ListItem><h2 onMouseEnter={() => handleCategoryHover('TRAVEL')}>TRAVEL</h2></ListItem></a>
+                <a href='/art'><ListItem><h2 onMouseEnter={() => handleCategoryHover('ART')}>ART</h2></ListItem></a>
+                <a href='/design'><ListItem><h2 onMouseEnter={() => handleCategoryHover('DESIGN')}>DESIGN</h2></ListItem></a>
+                <a href='/style'><ListItem><h2 onMouseEnter={() => handleCategoryHover('STYLE')}>STYLE</h2></ListItem></a>
+                <a href='/city_guides'><ListItem><h2 onMouseEnter={() => handleCategoryHover('CITY_GUIDES')}>CITY GUIDES</h2></ListItem></a>
             </Section>
             <Section>
                 <ListItem><h6>MEDIA</h6></ListItem>
-                <ListItem><h2 onMouseEnter={() => handleCategoryHover('FILMS')}>FILMS</h2></ListItem>
-                <ListItem><h2 onMouseEnter={() => handleCategoryHover('PLAYLIST')}>PLAYLIST</h2></ListItem>
+                <a href='/films'><ListItem><h2 onMouseEnter={() => handleCategoryHover('FILMS')}>FILMS</h2></ListItem></a>
+                <a href='/playlist'><ListItem><h2 onMouseEnter={() => handleCategoryHover('PLAYLIST')}>PLAYLIST</h2></ListItem></a>
             </Section>
             <Section>
-                <ListItem><h2 onMouseEnter={() => handleCategoryHover('SHOP')}>SHOP</h2></ListItem>
+                <a href='/shop'><ListItem><h2 onMouseEnter={() => handleCategoryHover('SHOP')}>SHOP</h2></ListItem></a>
             </Section>
         </SectionWrapper>
       </>
