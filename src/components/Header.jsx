@@ -6,8 +6,11 @@ import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
 const HeaderWrapper = styled.header`
     position : sticky;
+    top : 0;
+    z-index: 1000;
     height : 60px;
-    padding : 0.5rem 2rem;
+    padding : 8px 38px;
+    margin-bottom : 8px;
     display: flex;
     justify-content: space-between;
 `
@@ -20,9 +23,9 @@ const Title = styled.a`
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 0.5rem 1rem;
     display: inline-block;
-    width : 100px;
+    width : 120px;
+    height: 50px;
 `
 
 const MenuIcons = styled.div`

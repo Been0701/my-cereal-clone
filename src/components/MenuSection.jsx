@@ -5,8 +5,7 @@ import styled from 'styled-components';
 
 
 const SectionWrapper = styled.div`
-  margin-left : 38px;
-  margin-right : 53px;
+  margin : 0 53px 38.95px 38px;
   display : flex;
   justify-content : space-between;
 `

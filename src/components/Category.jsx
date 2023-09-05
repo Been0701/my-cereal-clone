@@ -7,7 +7,7 @@ const Section = styled.ul`
 list-style : none;
 margin-bottom : 40px;
 a {
-    color : #551A8B;
+    color : #2b2b2b;
     text-decoration : none;
 }
 `;
@@ -20,6 +20,8 @@ h2 {
     letter-spacing : 8px;
 }
 h6 {
+    font-family: 'VERLAG-BOOK';
+    src: url('../styles/font/VERLAG-BOOK.OTF') format('opentype');
     margin-right : 8px;
     margin-block-end : 0.5rem;
 }
