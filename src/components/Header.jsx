@@ -8,6 +8,7 @@ const HeaderWrapper = styled.header`
     position : sticky;
     top : 0;
     z-index: 1000;
+    background-color: #F4F4F4;
     height : 60px;
     padding : 8px 38px;
     margin-bottom : 8px;

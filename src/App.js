@@ -1,4 +1,5 @@
 import "../src/styles/fonts.css";
+import Catalog from "./components/Catalog";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <MenuSection />
       <Gallery />
+      <Catalog/>
       <Footer />
     </>
   );
